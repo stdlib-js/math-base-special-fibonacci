@@ -54,38 +54,30 @@ with seed values `F_0 = 0` and `F_1 = 1`.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-fibonacci
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-fibonacci = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var fibonacci = require( 'path/to/vendor/umd/math-base-special-fibonacci/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.fibonacci;
-})();
-</script>
+var fibonacci = require( '@stdlib/math-base-special-fibonacci' );
 ```
 
 #### fibonacci( n )
@@ -149,13 +141,8 @@ var v = fibonacci( NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var fibonacci = require( '@stdlib/math-base-special-fibonacci' );
 
 var v;
 var i;
@@ -164,11 +151,6 @@ for ( i = 0; i < 79; i++ ) {
     v = fibonacci( i );
     console.log( v );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -267,13 +249,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/binet]: https://github.com/stdlib-js/math-base-special-binet/tree/umd
+[@stdlib/math/base/special/binet]: https://github.com/stdlib-js/math-base-special-binet
 
-[@stdlib/math/base/special/fibonacci-index]: https://github.com/stdlib-js/math-base-special-fibonacci-index/tree/umd
+[@stdlib/math/base/special/fibonacci-index]: https://github.com/stdlib-js/math-base-special-fibonacci-index
 
-[@stdlib/math/base/special/lucas]: https://github.com/stdlib-js/math-base-special-lucas/tree/umd
+[@stdlib/math/base/special/lucas]: https://github.com/stdlib-js/math-base-special-lucas
 
-[@stdlib/math/base/special/negafibonacci]: https://github.com/stdlib-js/math-base-special-negafibonacci/tree/umd
+[@stdlib/math/base/special/negafibonacci]: https://github.com/stdlib-js/math-base-special-negafibonacci
 
 <!-- </related-links> -->
 
