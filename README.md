@@ -30,10 +30,14 @@ The [Fibonacci numbers][fibonacci-number] are the integer sequence
 
 <!-- <equation class="equation" label="eq:fibonacci_sequence" align="center" raw="0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \ldots" alt="Fibonacci sequence"> -->
 
-<div class="equation" align="center" data-raw-text="0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \ldots" data-equation="eq:fibonacci_sequence">
+```math
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \ldots
+```
+
+<!-- <div class="equation" align="center" data-raw-text="0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, \ldots" data-equation="eq:fibonacci_sequence">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@bb29798906e119fcb2af99e94b60407a270c9b32/lib/node_modules/@stdlib/math/base/special/fibonacci/docs/img/equation_fibonacci_sequence.svg" alt="Fibonacci sequence">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,10 +45,14 @@ The sequence is defined by the recurrence relation
 
 <!-- <equation class="equation" label="eq:fibonacci_recurrence_relation" align="center" raw="F_n = F_{n-1} + F_{n-2}" alt="Fibonacci sequence recurrence relation"> -->
 
-<div class="equation" align="center" data-raw-text="F_n = F_{n-1} + F_{n-2}" data-equation="eq:fibonacci_recurrence_relation">
+```math
+F_n = F_{n-1} + F_{n-2}
+```
+
+<!-- <div class="equation" align="center" data-raw-text="F_n = F_{n-1} + F_{n-2}" data-equation="eq:fibonacci_recurrence_relation">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@bb29798906e119fcb2af99e94b60407a270c9b32/lib/node_modules/@stdlib/math/base/special/fibonacci/docs/img/equation_fibonacci_recurrence_relation.svg" alt="Fibonacci sequence recurrence relation">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -54,38 +62,30 @@ with seed values `F_0 = 0` and `F_1 = 1`.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-fibonacci
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-fibonacci = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var fibonacci = require( 'path/to/vendor/umd/math-base-special-fibonacci/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.fibonacci;
-})();
-</script>
+var fibonacci = require( '@stdlib/math-base-special-fibonacci' );
 ```
 
 #### fibonacci( n )
@@ -149,13 +149,8 @@ var v = fibonacci( NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var fibonacci = require( '@stdlib/math-base-special-fibonacci' );
 
 var v;
 var i;
@@ -164,11 +159,6 @@ for ( i = 0; i < 79; i++ ) {
     v = fibonacci( i );
     console.log( v );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -177,7 +167,91 @@ for ( i = 0; i < 79; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/fibonacci.h"
+```
+
+#### stdlib_base_fibonacci( n )
+
+Computes the nth [Fibonacci number][fibonacci-number].
+
+```c
+double out = stdlib_base_fibonacci( 0 );
+// returns 0
+
+out = stdlib_base_fibonacci( 1 );
+// returns 1
+```
+
+The function accepts the following arguments:
+
+-   **n**: `[in] int32_t` input value.
+
+```c
+double stdlib_base_fibonacci( const int32_t n );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/fibonacci.h"
+#include <stdio.h>
+#include <stdint.h>
+
+int main() {
+    int32_t i;
+    double v;
+
+    for ( i = 0; i < 79; i++ ) {
+        v = stdlib_base_fibonacci( i );
+        printf( "fibonacci(%d) = %lf\n", i, v );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -249,7 +323,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -271,13 +345,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/binet]: https://github.com/stdlib-js/math-base-special-binet/tree/umd
+[@stdlib/math/base/special/binet]: https://github.com/stdlib-js/math-base-special-binet
 
-[@stdlib/math/base/special/fibonacci-index]: https://github.com/stdlib-js/math-base-special-fibonacci-index/tree/umd
+[@stdlib/math/base/special/fibonacci-index]: https://github.com/stdlib-js/math-base-special-fibonacci-index
 
-[@stdlib/math/base/special/lucas]: https://github.com/stdlib-js/math-base-special-lucas/tree/umd
+[@stdlib/math/base/special/lucas]: https://github.com/stdlib-js/math-base-special-lucas
 
-[@stdlib/math/base/special/negafibonacci]: https://github.com/stdlib-js/math-base-special-negafibonacci/tree/umd
+[@stdlib/math/base/special/negafibonacci]: https://github.com/stdlib-js/math-base-special-negafibonacci
 
 <!-- </related-links> -->
 
