@@ -28,7 +28,7 @@ var fibonacci = require( './../../dist' );
 
 // FIXTURES //
 
-var FIBONACCI = require( './../../dist/fibonacci.json' );
+var FIBONACCI = require( './../../lib/fibonacci.json' );
 
 
 // TESTS //
