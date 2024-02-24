@@ -80,7 +80,7 @@ with seed values `F_0 = 0` and `F_1 = 1`.
 ## Usage
 
 ```javascript
-import fibonacci from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@esm/index.mjs';
+import fibonacci from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@v0.2.1-esm/index.mjs';
 ```
 
 #### fibonacci( n )
@@ -150,7 +150,7 @@ var v = fibonacci( NaN );
 <body>
 <script type="module">
 
-import fibonacci from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@esm/index.mjs';
+import fibonacci from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fibonacci@v0.2.1-esm/index.mjs';
 
 var v;
 var i;
