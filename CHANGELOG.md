@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-08-23)
+## Unreleased (2025-09-05)
 
 <section class="reverts">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`baf65a6`](https://github.com/stdlib-js/stdlib/commit/baf65a6e432f27fd2876946a96d4801bb469c3ad) - **chore:** add structured package data for `math/base/special/fibonacci` [(#8012)](https://github.com/stdlib-js/stdlib/pull/8012) _(by Lokesh Ranjan, Athan Reines)_
 -   [`c5b3e0a`](https://github.com/stdlib-js/stdlib/commit/c5b3e0a0dab79dd39984f0a6bf45cd1a80f1f865) - **docs:** replace integers with doubles in `math/base/special/fibonacci` [(#7937)](https://github.com/stdlib-js/stdlib/pull/7937) _(by Gunj Joshi)_
 -   [`df33cdf`](https://github.com/stdlib-js/stdlib/commit/df33cdfc4f2511698aca3f3a8da19dd585f5b431) - **refactor:** modify C implementation to accept `double` instead of `int32` in `math/base/special/fibonacci` [(#7923)](https://github.com/stdlib-js/stdlib/pull/7923) _(by Gunj Joshi)_
 -   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
@@ -55,12 +56,13 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gunj Joshi
 -   Harsh
 -   Karan Anand
+-   Lokesh Ranjan
 -   Philipp Burckhardt
 
 </section>
